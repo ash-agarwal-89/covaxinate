@@ -10,13 +10,13 @@ const userAction = async () => {
   console.log(myJson);
   try{
     if(myJson){
-      document.querySelector("h1").innerHTML = 'success';
+      document.querySelector("h1").innerHTML = 'states retreieved';
     }else{
       console.log('no response')
     }
 
   }catch(err){
-    document.querySelector("h1").innerHTML = 'failed again!';
+    document.querySelector("h1").innerHTML = 'failed now!';
     console.log(err);
   }
 
