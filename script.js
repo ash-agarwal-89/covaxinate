@@ -2,7 +2,7 @@
 
 const userAction = async () => {
   try{
-  const response = await fetch('https://cdn-api.co-vin.in/api/v2/admin/location/states', {
+  const response = await fetch('https://cors-anywhere.herokuapp.com/https://cdn-api.co-vin.in/api/v2/admin/location/states', {
     method: 'GET',
     headers: {
       'accept': 'application/json',
@@ -20,7 +20,7 @@ const userAction = async () => {
     }
 
   }catch(err){
-    document.querySelector("h1").innerHTML = 'failed';
+    document.querySelector("h1").innerHTML = 'failed again!';
     console.log(err);
   }
 
