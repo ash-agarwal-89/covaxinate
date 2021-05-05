@@ -1,7 +1,7 @@
 'use strict';
 
 const userAction = async () => {
-  const response = await fetch('https://api.covid19api.com/countries', {
+  const response = await fetch('https://cdn-api.co-vin.in/api/v2/admin/location/states', {
     method: 'GET',
     headers: {
       'accept': 'application/json',
