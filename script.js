@@ -2,7 +2,7 @@
 
 const userAction = async () => {
   
-  const response = await fetch('https://cdn-api.co-vin.in/api/v2/admin/location/districts/16', {
+  const response = await fetch('https://cdn-api.co-vin.in/api/v2/admin/location/states', {
     method: 'GET'
   });
   const myJson = await response.json(); //extract JSON from the http response
