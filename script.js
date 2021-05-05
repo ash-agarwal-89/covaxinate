@@ -14,12 +14,13 @@ const userAction = async () => {
   console.log(myJson);
   
     if(myJson){
-      document.querySelector("h1").innerHTML = 'mmmm';
+      document.querySelector("h1").innerHTML = 'success';
     }else{
       console.log('no response')
     }
 
   }catch(err){
+    document.querySelector("h1").innerHTML = 'failed';
     console.log(err);
   }
 
