@@ -6,7 +6,7 @@ const userAction = async () => {
   // do something with myJson
   console.log(myJson);
   if(myJson){
-    document.getElementById("h1").innerHTML = 'mmmm';
+    document.querySelector("h1").innerHTML = 'mmmm';
   }else{
     console.log('no response')
   }
