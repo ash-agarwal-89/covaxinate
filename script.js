@@ -5,7 +5,11 @@ const userAction = async () => {
   const myJson = await response.json(); //extract JSON from the http response
   // do something with myJson
   console.log(myJson);
-  document.getElementById("h1").innerHTML = myJson.toString();
+  if(myJson){
+    document.getElementById("h1").innerHTML = myJson.toString();
+  }else{
+    console.log('no response')
+  }
 
 }
 
