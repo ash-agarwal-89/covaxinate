@@ -63,11 +63,11 @@ async function fetchStates(){
             resjson = await res.json();
         }
         let responseHtml = document.querySelector('.response');
-        if(resjson){
-            responseHtml.innerHTML = 'success states retrieved'+JSON.stringify(resjson);
-        }else{
-            responseHtml.innerHTML = 'failed';
-        }
+        // if(resjson){
+        //     responseHtml.innerHTML = 'success states retrieved'+JSON.stringify(resjson);
+        // }else{
+        //     responseHtml.innerHTML = 'failed';
+        // }
         const stateList = document.getElementById('state');
        // console.log(typeOf(resjson));
         //responseHtml.innerHTML = resjson.states;
@@ -83,7 +83,7 @@ async function fetchStates(){
     }catch(err){
         let responseHtml = document.querySelector('.response');
         console.log('error ...',err);
-        responseHtml.innerHTML = err;
+        //responseHtml.innerHTML = err;
     }
 
 }
@@ -122,11 +122,11 @@ async function fetchDistrcits(){
             resjson = await res.json();
         }
         let responseHtml = document.querySelector('.response');
-        if(resjson){
-            responseHtml.innerHTML = 'success district retrieved'+JSON.stringify(resjson);
-        }else{
-            responseHtml.innerHTML = 'failed';
-        }
+        // if(resjson){
+        //     responseHtml.innerHTML = 'success district retrieved'+JSON.stringify(resjson);
+        // }else{
+        //     responseHtml.innerHTML = 'failed';
+        // }
         const distList = document.getElementById('district');
         distList.options.length = 0;
        // console.log(typeOf(resjson));
@@ -143,7 +143,7 @@ async function fetchDistrcits(){
     }catch(err){
         let responseHtml = document.querySelector('.response');
         console.log('error ...',err);
-        responseHtml.innerHTML = err;
+        // responseHtml.innerHTML = err;
     }
 
 }
