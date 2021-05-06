@@ -4,6 +4,7 @@ console.log('app starting...')
 let readBtn = document.querySelector('.viewmore-btn');
 let appointBtn = document.getElementById('getstarteButton');
 let contents = document.querySelector('.content-text');
+let testFlag = false;
 
 
 document.addEventListener('click', (event)=>{
@@ -23,19 +24,36 @@ document.addEventListener('click', (event)=>{
 async function fetchStates(){
     try{
 
-        const res = await fetch(`https://cdn-api.co-vin.in/api/v2/admin/location/states`, {
-            method: 'GET'
-          });
-        const resjson = await res.json();
+        let resjson = '';
+        if(testFlag){
+            let resjsonStr = `{
+                "states": [
+                  {
+                    "state_id": 58,
+                    "state_name": "Andaman and Nicobar Islands",
+                    "state_name_l": ""
+                  }
+                ],
+                "ttl": 0
+              }`;
+              resjson = JSON.parse(resjsonStr);
+
+        }else{
+
+            const res = await fetch(`https://cdn-api.co-vin.in/api/v2/admin/location/states`, {
+                method: 'GET'
+              });
+            resjson = await res.json();
+        }
         let responseHtml = document.querySelector('.response');
         if(resjson){
-            responseHtml.innerHTML = 'success states retrieved';
+            responseHtml.innerHTML = 'success states retrieved'+JSON.stringify(resjson);
         }else{
             responseHtml.innerHTML = 'failed';
         }
         const stateList = document.getElementById('state');
        // console.log(typeOf(resjson));
-        responseHtml.innerHTML = resjson.states;
+        //responseHtml.innerHTML = resjson.states;
         resjson.states.forEach(state => {
     
             myOption = document.createElement("option");
