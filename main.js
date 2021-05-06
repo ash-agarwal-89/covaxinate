@@ -27,16 +27,29 @@ document.addEventListener('click', (event)=>{
 
 
 async function fetchStates(){
-    const res = await fetch(`https://cdn-api.co-vin.in/api/v2/admin/location/states`);
-    const json = await res.json;
+    try{
 
-    const stateList = document.getElementById('state');
-    json.states.forEach(state => {
-
-        myOption = document.createElement("option");
-        myOption.text = state_name;
-        myOption.value = state_name;
-        daySelect.appendChild(myOption);
-    });
+        const res = await fetch(`https://cdn-api.co-vin.in/api/v2/admin/location/states`);
+        const json = await res.json;
+        let responseHtml = document.querySelector('.response');
+        if(json){
+            responseHtml.innerHTML = json;
+        }else{
+            responseHtml.innerHTML = 'failed';
+        }
+        const stateList = document.getElementById('state');
+    
+        json.states.forEach(state => {
+    
+            myOption = document.createElement("option");
+            myOption.text = state_name;
+            myOption.value = state_name;
+            daySelect.appendChild(myOption);
+        });
+    }catch(err){
+        let responseHtml = document.querySelector('.response');
+        console.log('error',responseHtml);
+        responseHtml.innerHTML = 'error';
+    }
 
 }
