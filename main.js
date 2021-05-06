@@ -53,7 +53,7 @@ async function fetchStates(){
         console.log('ok');
     }catch(err){
         let responseHtml = document.querySelector('.response');
-        console.log('error',err);
+        console.log('error ...',err);
         responseHtml.innerHTML = err;
     }
 
