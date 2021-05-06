@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +9,22 @@
     <link rel="icon" type="image/png" href="/imgs/vaccine.png" />
     <script src="https://kit.fontawesome.com/6c26eae186.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
-    
-    
+
+
 </head>
+
 <body>
     <container class="container">
 
         <my-header></my-header>
-        
+
 
         <main class="main">
             <!-- <img src="../imgs/bg-img2.jpeg" alt="bg-image" class="bg-image"> -->
             <div class="content-text">
                 <h2 class="content-headline">Tracking vaccination at fingertips</h2>
                 <p class="content-details">Find available slots and book your appointment. Help others too.</p>
-                
+
             </div>
             <div class="btn-wrapper">
                 <button id="viewMoreButton" class="btn viewmore-btn">Read More</button>
@@ -31,21 +33,24 @@
 
 
             <!-- <div class="appointment-container"> -->
-                <!-- <div> -->
-                <select name="state" id="state" class="select-list">
-                    <option value="aa" class="option">aa</option>
-                    <option value="Assam" class="option">Assam</option>
-                    <option value="haryana" class="option">Haryana</option>
-                </select>
-                <!-- <i class="fas fa-caret-square-down"></i> -->
-                <!-- </div> -->
-                <!-- <div> -->
-                    <select name="disctrict" id="district" class="select-list" label="Select State">
-                        <option value="Assam" class="option">Tinsukia</option>
-                        <option value="haryana" class="option">Dibrugarh</option>
-                    </select>
-                    <!-- <i class="fas fa-caret-square-down"></i> -->
-                <!-- </div> -->
+            <!-- <div> -->
+            <label for="state">Choose a state:</label>
+            <select name="state" id="state" class="select-list">
+                <option value="aa" class="option">aa</option>
+                <option value="Assam" class="option">Assam</option>
+                <option value="haryana" class="option">Haryana</option>
+            </select>
+            <!-- <i class="fas fa-caret-square-down"></i> -->
+            <!-- </div> -->
+            <!-- <div> -->
+            <br>
+            <label for="disctrict">Choose a disctrict:</label>
+            <select name="disctrict" id="district" class="select-list">
+                <option value="Assam" class="option">Tinsukia</option>
+                <option value="haryana" class="option">Dibrugarh</option>
+            </select>
+            <!-- <i class="fas fa-caret-square-down"></i> -->
+            <!-- </div> -->
 
             <!-- </div> -->
             <div class="response"></div>
@@ -61,4 +66,5 @@
     <script src="../myheader.js"></script>
 
 </body>
+
 </html>
