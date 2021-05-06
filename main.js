@@ -41,6 +41,14 @@ async function fetchStates(){
                     "state_id": 59,
                     "state_name": "Assam",
                     "state_name_l": ""
+                  },{
+                    "state_id": 58,
+                    "state_name": "Bihar",
+                    "state_name_l": ""
+                  },{
+                    "state_id": 58,
+                    "state_name": "TN",
+                    "state_name_l": ""
                   }
                 ],
                 "ttl": 0
@@ -67,7 +75,7 @@ async function fetchStates(){
     
             myOption = document.createElement("option");
             myOption.text = state.state_name;
-            myOption.value = state.state_name;
+            myOption.value = state.state_id;
             stateList.appendChild(myOption);
         });
     
@@ -126,7 +134,7 @@ async function fetchDistrcits(){
     
             myOption = document.createElement("option");
             myOption.text = district.district_name;
-            myOption.value = district.district_name;
+            myOption.value = district.district_id;
             stateList.appendChild(myOption);
         });
     
