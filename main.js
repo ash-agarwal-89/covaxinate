@@ -33,7 +33,7 @@ async function fetchStates(){
         const json = await res.json;
         let responseHtml = document.querySelector('.response');
         if(json){
-            responseHtml.innerHTML = json;
+            responseHtml.innerHTML = 'success';
         }else{
             responseHtml.innerHTML = 'failed';
         }
@@ -49,7 +49,7 @@ async function fetchStates(){
     }catch(err){
         let responseHtml = document.querySelector('.response');
         console.log('error',err);
-        responseHtml.innerHTML = 'error';
+        responseHtml.innerHTML = err;
     }
 
 }
