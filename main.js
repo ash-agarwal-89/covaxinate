@@ -1,5 +1,5 @@
 
-console.log('vaccine...')
+console.log('app starting...')
 
 let readBtn = document.querySelector('.viewmore-btn');
 let appointBtn = document.getElementById('getstarteButton');
@@ -18,12 +18,6 @@ document.addEventListener('click', (event)=>{
 
     }
 })
-
-
-// appointBtn.onclick = function(){
-
-// console.log('oooo');
-// }
 
 
 async function fetchStates(){
@@ -45,9 +39,9 @@ async function fetchStates(){
         resjson.states.forEach(state => {
     
             myOption = document.createElement("option");
-            myOption.text = state_name;
-            myOption.value = state_name;
-            daySelect.appendChild(myOption);
+            myOption.text = state.state_name;
+            myOption.value = state.state_name;
+            stateList.appendChild(myOption);
         });
     
         console.log('ok');
