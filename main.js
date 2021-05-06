@@ -4,7 +4,7 @@ console.log('app starting...')
 let readBtn = document.querySelector('.viewmore-btn');
 let appointBtn = document.getElementById('getstarteButton');
 let contents = document.querySelector('.content-text');
-let testFlag = true;
+let testFlag = false;
 
 
 document.addEventListener('click', (event)=>{
