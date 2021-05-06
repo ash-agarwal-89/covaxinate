@@ -27,28 +27,29 @@ document.addEventListener('click', (event)=>{
 
 
 async function fetchStates(){
-    //try{
+    try{
 
         const res = await fetch(`https://cdn-api.co-vin.in/api/v2/admin/location/states`, {
             method: 'GET'
           });
-        const json = await res.json;
+        const resjson = await res.json();
         let responseHtml = document.querySelector('.response');
-        if(json){
-            responseHtml.innerHTML = json;
+        if(resjson){
+            responseHtml.innerHTML = resjson;
         }else{
             responseHtml.innerHTML = 'failed';
         }
         const stateList = document.getElementById('state');
+       // console.log(typeOf(resjson));
         //responseHtml.innerHTML = 'failed';
-        json.states.forEach(state => {
+        resjson.states.forEach(state => {
     
             myOption = document.createElement("option");
             myOption.text = state_name;
             myOption.value = state_name;
             daySelect.appendChild(myOption);
         });
-    try{
+    
         console.log('ok');
     }catch(err){
         let responseHtml = document.querySelector('.response');
