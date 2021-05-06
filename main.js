@@ -127,7 +127,8 @@ async function fetchDistrcits(){
         }else{
             responseHtml.innerHTML = 'failed';
         }
-        const stateList = document.getElementById('district');
+        const distList = document.getElementById('district');
+        distList.options.length = 0;
        // console.log(typeOf(resjson));
         //responseHtml.innerHTML = resjson.states;
         resjson.districts.forEach(district => {
@@ -135,7 +136,7 @@ async function fetchDistrcits(){
             myOption = document.createElement("option");
             myOption.text = district.district_name;
             myOption.value = district.district_id;
-            stateList.appendChild(myOption);
+            distList.appendChild(myOption);
         });
     
         console.log('ok');
