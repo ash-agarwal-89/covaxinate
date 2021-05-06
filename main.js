@@ -48,7 +48,7 @@ async function fetchStates(){
         });
     }catch(err){
         let responseHtml = document.querySelector('.response');
-        console.log('error',responseHtml);
+        console.log('error',err);
         responseHtml.innerHTML = 'error';
     }
 
