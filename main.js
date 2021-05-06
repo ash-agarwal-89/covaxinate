@@ -27,7 +27,7 @@ document.addEventListener('click', (event)=>{
 
 
 async function fetchStates(){
-    try{
+    //try{
 
         const res = await fetch(`https://cdn-api.co-vin.in/api/v2/admin/location/states`, {
             method: 'GET'
@@ -35,12 +35,12 @@ async function fetchStates(){
         const json = await res.json;
         let responseHtml = document.querySelector('.response');
         if(json){
-            responseHtml.innerHTML = 'success';
+            responseHtml.innerHTML = json;
         }else{
             responseHtml.innerHTML = 'failed';
         }
         const stateList = document.getElementById('state');
-    
+        //responseHtml.innerHTML = 'failed';
         json.states.forEach(state => {
     
             myOption = document.createElement("option");
@@ -48,6 +48,8 @@ async function fetchStates(){
             myOption.value = state_name;
             daySelect.appendChild(myOption);
         });
+    try{
+        console.log('ok');
     }catch(err){
         let responseHtml = document.querySelector('.response');
         console.log('error',err);
