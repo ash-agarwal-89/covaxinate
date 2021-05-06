@@ -29,7 +29,9 @@ document.addEventListener('click', (event)=>{
 async function fetchStates(){
     try{
 
-        const res = await fetch(`https://cdn-api.co-vin.in/api/v2/admin/location/states`);
+        const res = await fetch(`https://cdn-api.co-vin.in/api/v2/admin/location/states`, {
+            method: 'GET'
+          });
         const json = await res.json;
         let responseHtml = document.querySelector('.response');
         if(json){
