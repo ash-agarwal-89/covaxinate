@@ -29,13 +29,13 @@ async function fetchStates(){
         const resjson = await res.json();
         let responseHtml = document.querySelector('.response');
         if(resjson){
-            responseHtml.innerHTML = resjson;
+            responseHtml.innerHTML = 'success states retrieved';
         }else{
             responseHtml.innerHTML = 'failed';
         }
         const stateList = document.getElementById('state');
        // console.log(typeOf(resjson));
-        //responseHtml.innerHTML = 'failed';
+        responseHtml.innerHTML = resjson.states;
         resjson.states.forEach(state => {
     
             myOption = document.createElement("option");
