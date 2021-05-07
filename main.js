@@ -6,7 +6,7 @@ let appointBtn = document.getElementById('getstarteButton');
 let contents = document.querySelector('.content-text');
 let appointmentContainer = document.querySelector('.appointment-container');
 let searchApptBtn = document.querySelector(".fetch-appointments-btn");
-let testFlag = true;
+let testFlag = false;
 
 
 document.addEventListener('click', (event)=>{
