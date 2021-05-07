@@ -6,7 +6,7 @@ let appointBtn = document.getElementById('getstarteButton');
 let contents = document.querySelector('.content-text');
 let appointmentContainer = document.querySelector('.appointment-container');
 let searchApptBtn = document.querySelector(".fetch-appointments-btn");
-let testFlag = false;
+let testFlag = true;
 
 
 document.addEventListener('click', (event)=>{
@@ -87,7 +87,7 @@ async function fetchStates(){
     }catch(err){
         let responseHtml = document.querySelector('.response');
         console.log('error ...',err);
-        //responseHtml.innerHTML = err;
+        responseHtml.innerHTML = err;
     }
 
 }
