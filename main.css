@@ -106,6 +106,14 @@
 }
 
 
+.appointment-container{
+    margin: 10px 20px;
+}
+
+select{
+    margin-top: 10px;
+}
+
 
 .footer{
     background: black;

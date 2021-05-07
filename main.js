@@ -4,6 +4,7 @@ console.log('app starting...')
 let readBtn = document.querySelector('.viewmore-btn');
 let appointBtn = document.getElementById('getstarteButton');
 let contents = document.querySelector('.content-text');
+let appointmentContainer = document.querySelector('.appointment-container');
 let testFlag = false;
 
 
@@ -14,6 +15,7 @@ document.addEventListener('click', (event)=>{
         contents.classList.add('hide');
         readBtn.classList.add('hide');
         appointBtn.classList.add('hide');
+        appointmentContainer.classList.remove('hide');
         console.log('ok');
         fetchStates();
 
@@ -128,7 +130,7 @@ async function fetchDistrcits(){
         //     responseHtml.innerHTML = 'failed';
         // }
         const distList = document.getElementById('district');
-        distList.options.length = 0;
+        distList.options.length = 1;
        // console.log(typeOf(resjson));
         //responseHtml.innerHTML = resjson.states;
         resjson.districts.forEach(district => {
@@ -145,6 +147,12 @@ async function fetchDistrcits(){
         console.log('error ...',err);
         // responseHtml.innerHTML = err;
     }
+
+}
+
+async function onDistrictSelection(){
+    let selecteddist = document.getElementById("district").value;
+    console.log(selecteddist)
 
 }
 
