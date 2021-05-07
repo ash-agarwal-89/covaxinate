@@ -111,7 +111,51 @@
 }
 
 select{
+    margin: 10px 10%;
+    width: 80%;
+    outline:none;
+    border:none;
+    border-radius: 8px;
+    height: 30px;
+    background-color:rgb(22, 21, 21);
+    color:white;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.fetch-appointments-btn{
+    margin: 10px 25%;
+    font-size: 13px;
+    background-color:rgb(243, 117, 33);
+    color: white;
+    font-weight: bolder;
+}
+
+.fetch-appointments-btn:disabled {
+    /* background: #f3efef;
+    color:black; */
+    display:none;
+  }
+
+/* select option{
+    background-color:black;
+    font:red;
+} */
+
+
+.appointments-list{
+    margin: auto 20px;
+}
+
+.appointment-card{
     margin-top: 10px;
+    display:flex;
+    justify-content: space-around;
+    border: 2px rgb(247, 144, 11);
+    background-color: rgb(238, 195, 115);
+    color: rgb(100, 99, 94);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px black;
 }
 
 
