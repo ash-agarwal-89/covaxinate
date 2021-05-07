@@ -47,7 +47,7 @@ async function fetchStates(){
                     "state_name_l": ""
                   },{
                     "state_id": 58,
-                    "state_name": "Bihar",
+                    "state_name": "Bihar2",
                     "state_name_l": ""
                   },{
                     "state_id": 58,
