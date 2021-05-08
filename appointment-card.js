@@ -18,12 +18,14 @@ class appointmentCardContainer extends HTMLElement{
                 </div>
                 <div class="clock">
                     <span><i class="fas fa-clock"></i></span> 
-                    <span class="session-duration">${center.from} : ${center.to}</span>
+                    <span class="session-duration">${center.from} - ${center.to}</span>
                 </div>
             </div>
 
             <div class="slots">
-                <a href="#">Show details</a>
+                <div class="show-session">
+                    <span>Show Sessions</span>
+                </div>
             </div>
         </div>`;
     }
