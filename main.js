@@ -8,7 +8,7 @@ let appointmentContainer = document.querySelector('.appointment-container');
 let searchApptBtn = document.querySelector(".fetch-appointments-btn");
 let bgLoader = document.querySelector('.bg-loader');
 let bgLoaderAppt = document.querySelector('.bg-loader-appointment');
-let testFlag = false;
+let testFlag = true;
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -173,6 +173,7 @@ async function onDistrictSelection(){
 
 async function fetchAppointments(){
     try{
+        
         // bgLoaderAppt.classList.toggle('hide');
         let selectedState = document.getElementById("state").value;
         let selectedDistrict = document.getElementById("district").value;
@@ -346,7 +347,16 @@ async function fetchAppointments(){
         // }
         // bgLoaderAppt.classList.toggle('hide');
         const appointmentsList = document.querySelector('.appointments-list');
+        while (appointmentsList.firstChild) {
+          appointmentsList.removeChild(appointmentsList.lastChild);
+        }
+        // console.log(appointmentsList);
+        // if(appointmentsList['appointment-card-container']){
+        //   console.log(appointmentsList);
+        //   appointmentsList['appointment-card-container'].length=0;
+        // }
 
+        //appointmentsList['appointment-card-container'].length=0;
         resjson.centers.forEach(center => {
             const el = document.createElement('appointment-card-container');
             el.center = center;
