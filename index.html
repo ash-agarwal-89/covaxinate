@@ -14,10 +14,10 @@
 </head>
 
 <body>
-    <div class="bg-loader hide">
+    <!-- <div class="bg-loader hide">
         <img src="./imgs/bg-loader.gif" alt="bg-loader-img" class="loader-img">
         <div class="loader-text">loading...</div>
-    </div>
+    </div> -->
     <container class="container">
 
         <my-header></my-header>
@@ -60,7 +60,10 @@
             <!-- </div> -->
 
             <button id="fetch-appointment" class="btn fetch-appointments-btn" disabled>Search Appointments</button>
-
+            <div class="bg-loader hide">
+                <img src="./imgs/bg-loader.gif" alt="bg-loader-img" class="loader-img">
+                <div class="loader-text">loading...</div>
+            </div>
             <div class="appointments-list">
                 <div class="appointment-card">
                     <div class="appointment-venue-details">

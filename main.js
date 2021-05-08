@@ -172,6 +172,7 @@ async function onDistrictSelection(){
 
 async function fetchAppointments(){
     try{
+        bgLoader.classList.toggle('hide');
         let selectedState = document.getElementById("state").value;
         let selectedDistrict = document.getElementById("district").value;
         console.log(selectedDistrict);
@@ -234,7 +235,7 @@ async function fetchAppointments(){
         }else{
             responseHtml.innerHTML = 'failed';
         }
-        
+        bgLoader.classList.toggle('hide');
     
         console.log('ok');
     }catch(err){
