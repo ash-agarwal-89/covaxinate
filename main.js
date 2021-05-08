@@ -8,7 +8,7 @@ let appointmentContainer = document.querySelector('.appointment-container');
 let searchApptBtn = document.querySelector(".fetch-appointments-btn");
 let bgLoader = document.querySelector('.bg-loader');
 let bgLoaderAppt = document.querySelector('.bg-loader-appointment');
-let testFlag = true;
+let testFlag = false;
 
 
 document.addEventListener("DOMContentLoaded", function(){
