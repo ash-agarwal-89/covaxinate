@@ -224,8 +224,9 @@ async function fetchAppointments(){
               resjson = JSON.parse(resjsonStr);
 
         }else{
+            let selecteddate = '08-05-2021';
 
-            const res = await fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=512&date=31-03-2021`, {
+            const res = await fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=${selectedDistrict}&date=${selecteddate}`, {
                 method: 'GET'
               });
             resjson = await res.json();
