@@ -13,7 +13,7 @@ let testFlag = false;
 
 document.addEventListener("DOMContentLoaded", function(){
     //....
-    //bgLoader.classList.add('hide');
+    bgLoader.classList.add('hide');
 });
 
 
