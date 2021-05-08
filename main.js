@@ -7,6 +7,7 @@ let contents = document.querySelector('.content-text');
 let appointmentContainer = document.querySelector('.appointment-container');
 let searchApptBtn = document.querySelector(".fetch-appointments-btn");
 let bgLoader = document.querySelector('.bg-loader');
+let bgLoaderAppt = document.querySelector('.bg-loader-appointment');
 let testFlag = false;
 
 
@@ -172,7 +173,7 @@ async function onDistrictSelection(){
 
 async function fetchAppointments(){
     try{
-        bgLoader.classList.toggle('hide');
+        bgLoaderAppt.classList.toggle('hide');
         let selectedState = document.getElementById("state").value;
         let selectedDistrict = document.getElementById("district").value;
         console.log(selectedDistrict);
@@ -235,7 +236,7 @@ async function fetchAppointments(){
         }else{
             responseHtml.innerHTML = 'failed';
         }
-        bgLoader.classList.toggle('hide');
+        bgLoaderAppt.classList.toggle('hide');
     
         console.log('ok');
     }catch(err){
