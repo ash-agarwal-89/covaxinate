@@ -13,7 +13,7 @@ let testFlag = false;
 
 document.addEventListener("DOMContentLoaded", function(){
     //....
-    bgLoader.classList.add('hide');
+    //bgLoader.classList.add('hide');
 });
 
 
@@ -39,7 +39,7 @@ document.addEventListener('click', (event)=>{
 
 async function fetchStates(){
     try{
-        bgLoader.classList.toggle('hide');
+        // bgLoader.classList.toggle('hide');
         let resjson = '';
         if(testFlag){
             let resjsonStr = `{
@@ -90,7 +90,7 @@ async function fetchStates(){
             myOption.value = state.state_id;
             stateList.appendChild(myOption);
         });
-        bgLoader.classList.toggle('hide');
+        // bgLoader.classList.toggle('hide');
         console.log('ok');
     }catch(err){
         let responseHtml = document.querySelector('.response');
@@ -173,7 +173,7 @@ async function onDistrictSelection(){
 
 async function fetchAppointments(){
     try{
-        bgLoaderAppt.classList.toggle('hide');
+        // bgLoaderAppt.classList.toggle('hide');
         let selectedState = document.getElementById("state").value;
         let selectedDistrict = document.getElementById("district").value;
         console.log(selectedDistrict);
@@ -236,7 +236,7 @@ async function fetchAppointments(){
         }else{
             responseHtml.innerHTML = 'failed';
         }
-        bgLoaderAppt.classList.toggle('hide');
+        // bgLoaderAppt.classList.toggle('hide');
     
         console.log('ok');
     }catch(err){
