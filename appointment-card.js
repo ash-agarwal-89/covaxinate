@@ -16,8 +16,10 @@ class appointmentCardContainer extends HTMLElement{
                     <span><img src="./imgs/icons8-syringe-100.png" alt="" class="syrige-mg"/>
                     </span><span class="fee-type">${center.fee_type}</span>
                 </div>
-                <h4 class="session-duration">${center.from} : ${center.to}</h4>
-                <h4 class="pin-code">${center.pincode}</h4>
+                <div class="clock">
+                    <span><i class="far fa-clock"></i></span>
+                    <span class="session-duration">${center.from} : ${center.to}</span>
+                </div>
             </div>
 
             <div class="slots">

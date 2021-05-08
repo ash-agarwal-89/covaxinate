@@ -211,7 +211,8 @@ select{
 }
 
 .venue-address-container, 
-.vaccine-details{
+.vaccine-details,
+.clock{
     /* background-color: red !important; */
     padding: 5px 2px 2px 5px; 
     font-size: 13px;
@@ -219,9 +220,15 @@ select{
     align-items: center;
 }
 
-.venue-address-container i{
+.venue-address-container i,
+.clock i{
     /* background-color: red !important; */
     color: #DD4B3E;
+    width: 15px;
+    /* height:20px; */
+}
+.clock i{
+    color: black;
 }
 
 .vaccine-details .syrige-mg{
