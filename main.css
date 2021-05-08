@@ -355,12 +355,56 @@ select{
     width: 90%;
     display:flex;
     justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    background-color:rgb(240, 206, 143);
+    border-style: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+   
+}
+
+.sesion-card .session-date{
+    font-size: 13px;
+    color:rgb(42, 32, 90);
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    padding-top: 14px;
+    font-family: inherit;
+    border-radius: 5px;
+    width: 30%;
+    
+}
+
+.sesion-card .session-details{
+    font-family: inherit;
+    background-color: rgb(245, 200, 118);
+    padding-left: 10px;
+    border-radius: 5px;
+    width: 30%;
+
+    
+}
+
+.sesion-card .session-slots{
+    font-family: inherit;
+    background-color: rgb(243, 179, 60);
+    padding-left: 5px;
+    border-radius: 5px;
+    width: 40%;
+    font-size: 12px;
+    
+}
+
+.session-details h3,
+.session-slots h4{
+    margin-top: 5px;
 }
 
 .footer{
     background: black;
     min-height: 100px; 
     color: white
+
 }
 
 .footer-items{

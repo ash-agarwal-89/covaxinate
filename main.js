@@ -452,6 +452,30 @@ async function fetchAppointments(){
                               "02:00PM-04:00PM",
                               "04:00PM-05:00PM"
                             ]
+                          },{
+                            "session_id": "4a1bf5344-9f10-4029-baa0-a47b5ab97eb8",
+                            "date": "15-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "10:00AM-12:00PM",
+                              "12:00PM-02:00PM",
+                              "02:00PM-04:00PM",
+                              "04:00PM-05:00PM"
+                            ]
+                          },{
+                            "session_id": "4a1bf5366-9f10-4029-baa0-a47b5ab97eb8",
+                            "date": "16-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "10:00AM-12:00PM",
+                              "12:00PM-02:00PM",
+                              "02:00PM-04:00PM",
+                              "04:00PM-05:00PM"
+                            ]
                           }
                         ]
                       },
@@ -490,6 +514,20 @@ async function fetchAppointments(){
 
         }else{
             let selecteddate = '08-05-2021';
+            let todaydate = new Date();
+            let Tday = (todaydate.getDay()<10)?'0'+todaydate.getDay():todaydate.getDay();
+
+            let Tmonth = (todaydate.getMonth()<10)?'0'+todaydate.getMonth():todaydate.getMonth();
+
+
+            let Tyear = (todaydate.getFullYear()<10)?'0'+todaydate.getFullYear():todaydate.getFullYear();
+
+            console.log(Tday+'-'+Tmonth+'-'+todaydate.getFullYear());
+
+            selecteddate = Tday+'-'+Tmonth+'-'+todaydate.getFullYear();
+
+            // let currentDate = selecteddate.toString;
+
 
             const res = await fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=${selectedDistrict}&date=${selecteddate}`, {
                 method: 'GET'
