@@ -237,7 +237,22 @@ async function onDistrictSelection(){
 
 async function fetchAppointments(){
     try{
-        
+      let selecteddate = '';
+      let todaydate = new Date();
+      console.log(todaydate.getDate());
+      let Tday = (todaydate.getDate()<10)?'0'+todaydate.getDate():todaydate.getDate();
+
+      let Tmonth = (todaydate.getMonth()<10)?'0'+(todaydate.getMonth()+1):(todaydate.getMonth()+1);
+
+
+      let Tyear = (todaydate.getFullYear()<10)?'0'+todaydate.getFullYear():todaydate.getFullYear();
+
+      console.log(Tday+'-'+Tmonth+'-'+todaydate.getFullYear());
+
+      selecteddate = Tday+'-'+Tmonth+'-'+Tyear;
+
+      console.log(selecteddate);
+
         // bgLoaderAppt.classList.toggle('hide');
         let selectedState = document.getElementById("state").value;
         let selectedDistrict = document.getElementById("district").value;
@@ -513,19 +528,7 @@ async function fetchAppointments(){
               resjson = JSON.parse(resjsonStr);
 
         }else{
-            let selecteddate = '08-05-2021';
-            let todaydate = new Date();
-            let Tday = (todaydate.getDay()<10)?'0'+todaydate.getDay():todaydate.getDay();
-
-            let Tmonth = (todaydate.getMonth()<10)?'0'+todaydate.getMonth():todaydate.getMonth();
-
-
-            let Tyear = (todaydate.getFullYear()<10)?'0'+todaydate.getFullYear():todaydate.getFullYear();
-
-            console.log(Tday+'-'+Tmonth+'-'+todaydate.getFullYear());
-
-            selecteddate = Tday+'-'+Tmonth+'-'+Tyear;
-
+            
             // let currentDate = selecteddate.toString;
 
 
