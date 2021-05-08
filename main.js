@@ -11,7 +11,7 @@ let bgLoaderAppt = document.querySelector('.bg-loader-appointment');
 
 let closeBtn = document.getElementById('close-btn');
 let mainContent =  document.querySelector('.main');
-let testFlag = true;
+let testFlag = false;
 
 // document.addEventListener('contextmenu', function(e) {
 //   if(!testFlag)
