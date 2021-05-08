@@ -10,7 +10,7 @@
 
 .bg-loader{
     position:relative;
-    background-color:white;
+    background-color: linear-gradient(rgba(241, 159, 82, 0.897), rgb(235, 182, 85));
     z-index: 9999;
     width: 100%;
     height: 100%;

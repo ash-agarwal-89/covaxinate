@@ -38,7 +38,7 @@ document.addEventListener('click', (event)=>{
 
 async function fetchStates(){
     try{
-        //bgLoader.classList.toggle('hide');
+        bgLoader.classList.toggle('hide');
         let resjson = '';
         if(testFlag){
             let resjsonStr = `{
@@ -89,7 +89,7 @@ async function fetchStates(){
             myOption.value = state.state_id;
             stateList.appendChild(myOption);
         });
-        //bgLoader.classList.toggle('hide');
+        bgLoader.classList.toggle('hide');
         console.log('ok');
     }catch(err){
         let responseHtml = document.querySelector('.response');
