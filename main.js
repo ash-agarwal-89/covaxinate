@@ -218,6 +218,44 @@ async function fetchAppointments(){
                         ]
                       }
                     ]
+                  },
+                  {
+                    "center_id": 1235,
+                    "name": "District General Hostpital 3",
+                    "name_l": "",
+                    "address": "45 M G Road 3",
+                    "address_l": "",
+                    "state_name": "Maharashtra",
+                    "state_name_l": "",
+                    "district_name": "Satara",
+                    "district_name_l": "",
+                    "block_name": "Jaoli 2",
+                    "block_name_l": "",
+                    "pincode": "413609",
+                    "lat": 28.7,
+                    "long": 77.1,
+                    "from": "09:00:00",
+                    "to": "18:00:00",
+                    "fee_type": "Free",
+                    "vaccine_fees": [
+                      {
+                        "vaccine": "COVISHIELD",
+                        "fee": "free"
+                      }
+                    ],
+                    "sessions": [
+                      {
+                        "session_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                        "date": "31-05-2021",
+                        "available_capacity": 10,
+                        "min_age_limit": 45,
+                        "vaccine": "Covaxin",
+                        "slots": [
+                          "09:00 - 11:00",
+                          "13:00 - 15:00"
+                        ]
+                      }
+                    ]
                   }
                 ]
               }`;
@@ -231,13 +269,21 @@ async function fetchAppointments(){
               });
             resjson = await res.json();
         }
-        let responseHtml = document.querySelector('.response');
-        if(resjson){
-            responseHtml.innerHTML = 'success appt retrieved'+JSON.stringify(resjson);
-        }else{
-            responseHtml.innerHTML = 'failed';
-        }
+        // let responseHtml = document.querySelector('.response');
+        // if(resjson){
+        //     responseHtml.innerHTML = 'success appt retrieved'+JSON.stringify(resjson);
+        // }else{
+        //     responseHtml.innerHTML = 'failed';
+        // }
         // bgLoaderAppt.classList.toggle('hide');
+        const appointmentsList = document.querySelector('.appointments-list');
+
+        resjson.centers.forEach(center => {
+            const el = document.createElement('appointment-card-container');
+            el.center = center;
+            appointmentsList.appendChild(el);
+        });
+
     
         console.log('ok');
     }catch(err){

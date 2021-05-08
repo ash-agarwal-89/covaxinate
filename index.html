@@ -21,7 +21,7 @@
     <container class="container">
 
         <my-header></my-header>
-        
+
 
         <main class="main">
             <!-- <img src="../imgs/bg-img2.jpeg" alt="bg-image" class="bg-image"> -->
@@ -37,61 +37,35 @@
 
 
             <div class="appointment-container hide">
-            <!-- <div> -->
-            <h2 class="content-headline">Search for slots near your area</h2>
-            <!-- <label for="state">Choose a state:</label> -->
-            <select name="state" id="state" class="select-list" onchange="fetchDistrcits()">
-                <option value="none" class="option">--Select State--</option>
-                <!-- <option value="aa" class="option">aa</option>
+                <!-- <div> -->
+                <h2 class="content-headline">Search for slots near your area</h2>
+                <!-- <label for="state">Choose a state:</label> -->
+                <select name="state" id="state" class="select-list" onchange="fetchDistrcits()">
+                    <option value="none" class="option">--Select State--</option>
+                    <!-- <option value="aa" class="option">aa</option>
                 <option value="Assam" class="option">Assam</option>
                 <option value="haryana" class="option">Haryana</option> -->
-            </select>
-            <!-- <i class="fas fa-caret-square-down"></i> -->
-            <!-- </div> -->
-            <!-- <div> -->
-            <br>
-            <!-- <label for="disctrict">Choose a disctrict:</label> -->
-            <select name="disctrict" id="district" class="select-list" onchange="onDistrictSelection()">
-                <option value="none" class="option">--Select district--</option>
-                <!-- <option value="Assam" class="option">Tinsukia</option>
+                </select>
+                <!-- <i class="fas fa-caret-square-down"></i> -->
+                <!-- </div> -->
+                <!-- <div> -->
+                <br>
+                <!-- <label for="disctrict">Choose a disctrict:</label> -->
+                <select name="disctrict" id="district" class="select-list" onchange="onDistrictSelection()">
+                    <option value="none" class="option">--Select district--</option>
+                    <!-- <option value="Assam" class="option">Tinsukia</option>
                 <option value="haryana" class="option">Dibrugarh</option> -->
-            </select>
-            <!-- <i class="fas fa-caret-square-down"></i> -->
-            <!-- </div> -->
+                </select>
+                <!-- <i class="fas fa-caret-square-down"></i> -->
+                <!-- </div> -->
 
-            <button id="fetch-appointment" class="btn fetch-appointments-btn" disabled>Search Appointments</button>
-           
-            <div class="appointments-list">
-                <div class="appointment-card">
-                    <div class="appointment-venue-details">
-                        <h3 class="hospital-name">District General Hostpital</h3>
-                        <h4 class="hospital-address">address</h4>
-                        <h4 class="block-name">Jaoli</h4>
-                    </div>
+                <button id="fetch-appointment" class="btn fetch-appointments-btn" disabled>Search Appointments</button>
 
-                    <div class="slots">
-                        show
-                    </div>
+                <div class="appointments-list">
                     
-
                 </div>
-                <div class="appointment-card">
-                    <div class="appointment-venue-details">
-                        <h3 class="hospital-name">District General Hostpital</h3>
-                        <h4 class="hospital-address">address</h4>
-                        <h4 class="block-name">Jaoli</h4>
-                    </div>
-
-                    <div class="slots">
-                        show
-                    </div>
-                    
-
-                </div>
-                
             </div>
-            </div>
-            
+
             <br>
             <div class="response"></div>
 
@@ -102,8 +76,9 @@
         <my-footer></my-footer>
     </container>
     <script src="main.js"></script>
-    <script src="../myfooter.js"></script>
-    <script src="../myheader.js"></script>
+    <script src="/myfooter.js"></script>
+    <script src="/myheader.js"></script>
+    <script src="/appointment-card.js"></script>
 
 </body>
 
