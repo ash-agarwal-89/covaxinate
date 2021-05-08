@@ -524,7 +524,7 @@ async function fetchAppointments(){
 
             console.log(Tday+'-'+Tmonth+'-'+todaydate.getFullYear());
 
-            selecteddate = Tday+'-'+Tmonth+'-'+todaydate.getFullYear();
+            selecteddate = Tday+'-'+Tmonth+'-'+Tyear;
 
             // let currentDate = selecteddate.toString;
 
@@ -563,7 +563,7 @@ async function fetchAppointments(){
     }catch(err){
         let responseHtml = document.querySelector('.response');
         console.log('error ...',err);
-        // responseHtml.innerHTML = err;
+        responseHtml.innerHTML = err;
     }
 
 }
