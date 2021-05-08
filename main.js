@@ -119,11 +119,20 @@ async function fetchStates(){
                     "state_name_l": ""
                   },{
                     "state_id": 58,
-                    "state_name": "Bihar2",
+                    "state_name": "Bihar",
                     "state_name_l": ""
                   },{
                     "state_id": 58,
-                    "state_name": "TN",
+                    "state_name": "Tamil Nadu",
+                    "state_name_l": ""
+                  },{
+                    "state_id": 58,
+                    "state_name": "Maharashtra",
+                    "state_name_l": ""
+                  }
+                  ,{
+                    "state_id": 58,
+                    "state_name": "Delhi",
                     "state_name_l": ""
                   }
                 ],
@@ -178,13 +187,25 @@ async function fetchDistrcits(){
                   {
                     "state_id": 16,
                     "district_id": 391,
-                    "district_name": "Ahmednagar",
+                    "district_name": "Tinsukia",
                     "district_name_l": ""
                   },
                   {
                     "state_id": 16,
                     "district_id": 392,
-                    "district_name": "Pune",
+                    "district_name": "Dibrugarh",
+                    "district_name_l": ""
+                  },
+                  {
+                    "state_id": 16,
+                    "district_id": 393,
+                    "district_name": "Guwahati",
+                    "district_name_l": ""
+                  },
+                  {
+                    "state_id": 16,
+                    "district_id": 394,
+                    "district_name": "Jorhat",
                     "district_name_l": ""
                   }
                 ],
