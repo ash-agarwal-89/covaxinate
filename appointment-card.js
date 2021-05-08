@@ -1,9 +1,18 @@
 class appointmentCardContainer extends HTMLElement{
 
     set center(center){
-        console.log('center----',center);
+        console.log('center----', JSON.stringify(center.sessions) ,center);
+        let sessions = center.sessions;
+        let sessionId = sessions;
+        let sessionArray = [];
+        sessions.forEach(session => {
+            console.log('session id...  ',session.session_id);
+            sessionArray.push(session.session_id);
+
+        });
+
         this.innerHTML = `
-        <div class="appointment-card">
+        <div class="appointment-card" data-id=${center.center_id} data-sessions=${JSON.stringify(center.sessions)}>
             <div class="appointment-venue-details">
                 <h3 class="hospital-name">${center.name}</h3>
                 <div class="venue-address-container">

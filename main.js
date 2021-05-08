@@ -8,6 +8,8 @@ let appointmentContainer = document.querySelector('.appointment-container');
 let searchApptBtn = document.querySelector(".fetch-appointments-btn");
 let bgLoader = document.querySelector('.bg-loader');
 let bgLoaderAppt = document.querySelector('.bg-loader-appointment');
+let sessionModal = document.querySelector('.session-modal');
+let closeBtn = document.getElementById('close-btn');
 let testFlag = false;
 
 // document.addEventListener('contextmenu', function(e) {
@@ -38,6 +40,14 @@ document.addEventListener('click', (event)=>{
         console.log(event.target);
         fetchAppointments();
 
+    }
+    if(event.target.classList == "slots"){
+      console.log(event.target.parentElement.dataset.sessions);
+      sessionModal.classList.toggle('show-modal');
+    }
+    if(event.target.id == "close-btn"){
+      console.log('close fired');
+      sessionModal.classList.remove('show-modal');
     }
 })
 
@@ -242,6 +252,19 @@ async function fetchAppointments(){
                               "12:00PM-01:00PM",
                               "01:00PM-02:00PM"
                             ]
+                          },
+                          {
+                            "session_id": "da8d1dii2-d12f-4814-a064-aad85906cad1",
+                            "date": "08-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 18,
+                            "vaccine": "COVAXIN",
+                            "slots": [
+                              "10:00AM-11:00AM",
+                              "11:00AM-12:00PM",
+                              "12:00PM-01:00PM",
+                              "01:00PM-02:00PM"
+                            ]
                           }
                         ]
                       },
@@ -377,4 +400,6 @@ async function fetchAppointments(){
     }
 
 }
+
+
 
