@@ -181,82 +181,151 @@ async function fetchAppointments(){
         if(testFlag){
             let resjsonStr = `{
                 "centers": [
-                  {
-                    "center_id": 1234,
-                    "name": "District General Hostpital",
-                    "name_l": "",
-                    "address": "45 M G Road",
-                    "address_l": "",
-                    "state_name": "Maharashtra",
-                    "state_name_l": "",
-                    "district_name": "Satara",
-                    "district_name_l": "",
-                    "block_name": "Jaoli",
-                    "block_name_l": "",
-                    "pincode": "413608",
-                    "lat": 28.7,
-                    "long": 77.1,
-                    "from": "09:00:00",
-                    "to": "18:00:00",
-                    "fee_type": "Free",
-                    "vaccine_fees": [
+                    {
+                        "center_id": 642106,
+                        "name": "Bisa Gaon HWC",
+                        "address": "Bisa Gaon",
+                        "state_name": "Assam",
+                        "district_name": "Tinsukia",
+                        "block_name": "Ketetong Block",
+                        "pincode": 786182,
+                        "lat": 27,
+                        "long": 95,
+                        "from": "09:00:00",
+                        "to": "17:00:00",
+                        "fee_type": "Free",
+                        "sessions": [
+                          {
+                            "session_id": "f4b5c8d2-4f7d-4cb3-8f38-35e2c039d8a5",
+                            "date": "08-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "09:00AM-11:00AM",
+                              "11:00AM-01:00PM",
+                              "01:00PM-03:00PM",
+                              "03:00PM-05:00PM"
+                            ]
+                          }
+                        ]
+                      },
                       {
-                        "vaccine": "COVISHIELD",
-                        "fee": "250"
-                      }
-                    ],
-                    "sessions": [
+                        "center_id": 695511,
+                        "name": "Junior Basic School Kakopather",
+                        "address": "Kakopather Tinsukia",
+                        "state_name": "Assam",
+                        "district_name": "Tinsukia",
+                        "block_name": "Kakopathar Block",
+                        "pincode": 786152,
+                        "lat": 27,
+                        "long": 95,
+                        "from": "10:00:00",
+                        "to": "14:00:00",
+                        "fee_type": "Free",
+                        "sessions": [
+                          {
+                            "session_id": "da8d1d32-d12f-4814-a064-aad85906cad1",
+                            "date": "08-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 18,
+                            "vaccine": "COVAXIN",
+                            "slots": [
+                              "10:00AM-11:00AM",
+                              "11:00AM-12:00PM",
+                              "12:00PM-01:00PM",
+                              "01:00PM-02:00PM"
+                            ]
+                          }
+                        ]
+                      },
                       {
-                        "session_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-                        "date": "31-05-2021",
-                        "available_capacity": 50,
-                        "min_age_limit": 18,
-                        "vaccine": "COVISHIELD",
-                        "slots": [
-                          "FORENOON",
-                          "AFTERNOON"
+                        "center_id": 99761,
+                        "name": "Ketetong PHC (COVISHIELD)",
+                        "address": "Ketetong BPHC",
+                        "state_name": "Assam",
+                        "district_name": "Tinsukia",
+                        "block_name": "Ketetong Block",
+                        "pincode": 786181,
+                        "lat": 27,
+                        "long": 95,
+                        "from": "10:00:00",
+                        "to": "17:00:00",
+                        "fee_type": "Free",
+                        "sessions": [
+                          {
+                            "session_id": "601aedd7-b0ae-4a6e-98e3-b2e579280b24",
+                            "date": "08-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "10:00AM-12:00PM",
+                              "12:00PM-02:00PM",
+                              "02:00PM-04:00PM",
+                              "04:00PM-05:00PM"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "center_id": 642776,
+                        "name": "Telikola HWC",
+                        "address": "Telikola SC",
+                        "state_name": "Assam",
+                        "district_name": "Tinsukia",
+                        "block_name": "Na-Sadiya Block",
+                        "pincode": 786158,
+                        "lat": 27,
+                        "long": 95,
+                        "from": "09:00:00",
+                        "to": "17:00:00",
+                        "fee_type": "Free",
+                        "sessions": [
+                          {
+                            "session_id": "69c2d44e-fe83-4edd-ab5b-3a020cd36dd9",
+                            "date": "08-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "09:00AM-11:00AM",
+                              "11:00AM-01:00PM",
+                              "01:00PM-03:00PM",
+                              "03:00PM-05:00PM"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "center_id": 661366,
+                        "name": "Anandabag T.E. Hospital",
+                        "address": "Anandabag T.E. Hospital",
+                        "state_name": "Assam",
+                        "district_name": "Tinsukia",
+                        "block_name": "Hapjan Block",
+                        "pincode": 786170,
+                        "lat": 0,
+                        "long": 0,
+                        "from": "09:00:00",
+                        "to": "17:00:00",
+                        "fee_type": "Free",
+                        "sessions": [
+                          {
+                            "session_id": "ea63d22b-bb72-4671-ac6c-da9e1926fc6e",
+                            "date": "08-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "09:00AM-11:00AM",
+                              "11:00AM-01:00PM",
+                              "01:00PM-03:00PM",
+                              "03:00PM-05:00PM"
+                            ]
+                          }
                         ]
                       }
-                    ]
-                  },
-                  {
-                    "center_id": 1235,
-                    "name": "District General Hostpital 3",
-                    "name_l": "",
-                    "address": "45 M G Road 3",
-                    "address_l": "",
-                    "state_name": "Maharashtra",
-                    "state_name_l": "",
-                    "district_name": "Satara",
-                    "district_name_l": "",
-                    "block_name": "Jaoli 2",
-                    "block_name_l": "",
-                    "pincode": "413609",
-                    "lat": 28.7,
-                    "long": 77.1,
-                    "from": "09:00:00",
-                    "to": "18:00:00",
-                    "fee_type": "Free",
-                    "vaccine_fees": [
-                      {
-                        "vaccine": "COVISHIELD",
-                        "fee": "free"
-                      }
-                    ],
-                    "sessions": [
-                      {
-                        "session_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-                        "date": "31-05-2021",
-                        "available_capacity": 10,
-                        "min_age_limit": 45,
-                        "vaccine": "Covaxin",
-                        "slots": [
-                          "09:00 - 11:00",
-                          "13:00 - 15:00"
-                        ]
-                      }
-                    ]
-                  }
                 ]
               }`;
               resjson = JSON.parse(resjsonStr);
