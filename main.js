@@ -66,9 +66,19 @@ document.addEventListener('click', (event)=>{
         const sessionItemEl = document.createElement('session-item');
         sessionItemEl.sessionItem = sessionItem;
         sessionModal.appendChild(sessionItemEl);
-        let tempVar = sessionItemEl.session_id;
+        let tempVar = sessionItem.session_id;
         console.log('sessionItemEl.session_id--- ',sessionItem.session_id);
-        let parentEl = document.querySelector(`#${sessionItem.session_id} > .session-slots`);
+        // let parentEl = document.querySelector(`#${sessionItem.session_id} > .session-slots`);
+        let childElems = document.getElementById(tempVar).childNodes;
+        console.log(childElems);
+        let parentEl = null;
+        childElems.forEach(el => {
+          console.log(el.className);
+          if(el.className == 'session-slots'){
+            parentEl = el;
+          }
+        });
+
         const sessionSlots = sessionItem.slots;
         sessionSlots.forEach(slot => {
           console.log('slot ', parentEl);
@@ -361,6 +371,86 @@ async function fetchAppointments(){
                               "11:00AM-01:00PM",
                               "01:00PM-03:00PM",
                               "03:00PM-05:00PM"
+                            ]
+                          }
+                        ]
+                      },{
+                        "center_id": 583466,
+                        "name": "Bandarkhati MPHC",
+                        "address": "Bandarkhati",
+                        "state_name": "Assam",
+                        "district_name": "Tinsukia",
+                        "block_name": "Hapjan Block",
+                        "pincode": 786170,
+                        "lat": 27,
+                        "long": 95,
+                        "from": "10:00:00",
+                        "to": "17:00:00",
+                        "fee_type": "Free",
+                        "sessions": [
+                          {
+                            "session_id": "807bb767-fadc-4b82-af67-fec914a7f37c",
+                            "date": "08-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "10:00AM-12:00PM",
+                              "12:00PM-02:00PM",
+                              "02:00PM-04:00PM",
+                              "04:00PM-05:00PM"
+                            ]
+                          },
+                          {
+                            "session_id": "5948fee8-7e8e-428d-9a76-a2048b0c2415",
+                            "date": "10-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "10:00AM-12:00PM",
+                              "12:00PM-02:00PM",
+                              "02:00PM-04:00PM",
+                              "04:00PM-05:00PM"
+                            ]
+                          },
+                          {
+                            "session_id": "7621b339-2642-4e6d-b46b-9813b0c950d8",
+                            "date": "11-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "10:00AM-12:00PM",
+                              "12:00PM-02:00PM",
+                              "02:00PM-04:00PM",
+                              "04:00PM-05:00PM"
+                            ]
+                          },
+                          {
+                            "session_id": "a03e887b-93d3-4bae-92ad-67d58a24a966",
+                            "date": "13-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "10:00AM-12:00PM",
+                              "12:00PM-02:00PM",
+                              "02:00PM-04:00PM",
+                              "04:00PM-05:00PM"
+                            ]
+                          },
+                          {
+                            "session_id": "4a1bf532-9f10-4029-baa0-a47b5ab97eb8",
+                            "date": "14-05-2021",
+                            "available_capacity": 0,
+                            "min_age_limit": 45,
+                            "vaccine": "COVISHIELD",
+                            "slots": [
+                              "10:00AM-12:00PM",
+                              "12:00PM-02:00PM",
+                              "02:00PM-04:00PM",
+                              "04:00PM-05:00PM"
                             ]
                           }
                         ]
