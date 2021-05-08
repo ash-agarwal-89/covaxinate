@@ -17,7 +17,7 @@ class appointmentCardContainer extends HTMLElement{
                     </span><span class="fee-type">${center.fee_type}</span>
                 </div>
                 <div class="clock">
-                    <span><i class="far fa-clock"></i></span>
+                    <span><i class="fas fa-clock"></i></span> 
                     <span class="session-duration">${center.from} : ${center.to}</span>
                 </div>
             </div>
