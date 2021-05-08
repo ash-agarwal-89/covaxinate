@@ -6,7 +6,14 @@ let appointBtn = document.getElementById('getstarteButton');
 let contents = document.querySelector('.content-text');
 let appointmentContainer = document.querySelector('.appointment-container');
 let searchApptBtn = document.querySelector(".fetch-appointments-btn");
-let testFlag = false;
+let bgLoader = document.querySelector('.bg-loader');
+let testFlag = true;
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    //....
+    bgLoader.classList.add('hide');
+});
 
 
 document.addEventListener('click', (event)=>{
