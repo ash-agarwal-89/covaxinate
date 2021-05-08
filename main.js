@@ -10,6 +10,11 @@ let bgLoader = document.querySelector('.bg-loader');
 let bgLoaderAppt = document.querySelector('.bg-loader-appointment');
 let testFlag = false;
 
+// document.addEventListener('contextmenu', function(e) {
+//   if(!testFlag)
+//   e.preventDefault();
+// });
+
 
 document.addEventListener("DOMContentLoaded", function(){
     //....
