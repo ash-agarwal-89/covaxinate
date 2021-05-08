@@ -8,9 +8,10 @@ let appointmentContainer = document.querySelector('.appointment-container');
 let searchApptBtn = document.querySelector(".fetch-appointments-btn");
 let bgLoader = document.querySelector('.bg-loader');
 let bgLoaderAppt = document.querySelector('.bg-loader-appointment');
-let sessionModal = document.querySelector('.session-modal');
+
 let closeBtn = document.getElementById('close-btn');
-let testFlag = false;
+let mainContent =  document.querySelector('.main');
+let testFlag = true;
 
 // document.addEventListener('contextmenu', function(e) {
 //   if(!testFlag)
@@ -42,12 +43,50 @@ document.addEventListener('click', (event)=>{
 
     }
     if(event.target.classList == "slots"){
-      console.log(event.target.parentElement.dataset.sessions);
+      let sessionsElement = JSON.parse(event.target.parentElement.dataset.sessions);
+      console.log(sessionsElement);
+      console.log(sessionsElement.name);
+      
+      appointmentContainer.classList.toggle('blur');
+      const modaleElement = document.createElement('session-modal');
+      console.log('modaleElement .. ',modaleElement);
+      modaleElement.sessions = event.target.parentElement.dataset.sessions;
+      //modaleElement.hospital = 'exaple';
+      //appointmentsList.appendChild(el);
+      // while (mainContent.firstChild) {
+      //   mainContent.removeChild(mainContent.lastChild);
+      // }
+
+      mainContent.appendChild(modaleElement);
+      // const appointmentsList = document.querySelector('.appointments-list');
+      
+      let sessionModal = document.querySelector('.session-modal');
       sessionModal.classList.toggle('show-modal');
+      sessionsElement.sessions.forEach(sessionItem => {
+        const sessionItemEl = document.createElement('session-item');
+        sessionItemEl.sessionItem = sessionItem;
+        sessionModal.appendChild(sessionItemEl);
+        let tempVar = sessionItemEl.session_id;
+        console.log('sessionItemEl.session_id--- ',sessionItem.session_id);
+        let parentEl = document.querySelector(`#${sessionItem.session_id} > .session-slots`);
+        const sessionSlots = sessionItem.slots;
+        sessionSlots.forEach(slot => {
+          console.log('slot ', parentEl);
+          let childEl = document.createElement('h4');
+          childEl.innerHTML = `${slot}`;
+          childEl.className = "timeslot";
+          parentEl.appendChild(childEl);
+          
+        })
+
+      })
     }
     if(event.target.id == "close-btn"){
       console.log('close fired');
+      let sessionModal = document.querySelector('.session-modal');
       sessionModal.classList.remove('show-modal');
+      appointmentContainer.classList.toggle('blur');
+      sessionModal.parentNode.removeChild(sessionModal);
     }
 })
 
