@@ -10,7 +10,8 @@ let bgLoader = document.querySelector('.bg-loader');
 let bgLoaderAppt = document.querySelector('.bg-loader-appointment');
 
 let closeBtn = document.getElementById('close-btn');
-let mainContent =  document.querySelector('.main');
+let mainContent = document.querySelector('.main');
+let searchBox = document.querySelector('.search-filter-apt-list');
 let testFlag = false;
 
 // document.addEventListener('contextmenu', function(e) {
@@ -567,6 +568,7 @@ async function fetchAppointments(){
         // bgLoaderAppt.classList.toggle('hide');
         const appointmentsList = document.querySelector('.appointments-list');
         while (appointmentsList.firstChild) {
+          console.log('appointmentsList.firstChild',appointmentsList.firstChild);
           appointmentsList.removeChild(appointmentsList.lastChild);
         }
         // console.log(appointmentsList);
@@ -581,7 +583,7 @@ async function fetchAppointments(){
             el.center = center;
             appointmentsList.appendChild(el);
         });
-
+        searchBox.classList.remove('hide');
     
         console.log('ok');
     }catch(err){
@@ -592,5 +594,26 @@ async function fetchAppointments(){
 
 }
 
+function filterList(){
+  console.log('onchange');
+  let searchText = searchBox.value;
+  console.log('onchange',searchText);
+  let childElems = document.querySelector('.appointments-list').childNodes;
+  
+  console.log('childElems', childElems);
+
+  childElems.forEach(el => {
+    let sessionsData = JSON.parse(el.children[0].dataset.sessions);
+    let venueName = sessionsData.name.replaceAll("_"," ");
+    let venueAddress = sessionsData.address.replaceAll("_"," ");
+    console.log('sessionsData.name', venueName, venueAddress);
+    if(!(venueName.toLowerCase().includes(searchText.toLowerCase()) || venueAddress.toLowerCase().includes(searchText.toLowerCase()))){
+      console.log('not found');
+      el.classList.add('hide');
+    }else{
+      el.classList.remove('hide');
+    }
+  });
+}
 
 

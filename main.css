@@ -131,11 +131,14 @@
 }
 
 
-.appointment-container{
+.appointment-container,
+.search-filter-apt-list{
     margin: 10px 20px;
 }
 
-select{
+
+select,
+.search-filter-apt-list{
     margin: 10px 10%;
     width: 80%;
     outline:none;
